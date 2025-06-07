@@ -128,5 +128,5 @@ Ensure your application has write permissions in this folder.
 
 ## 🧑‍💻 Author
 
-Built with ❤️ by [Your Name]  
+Built with ❤️ by Pawan Vijayaraghavan  
 Open source under [MIT License](LICENSE)
