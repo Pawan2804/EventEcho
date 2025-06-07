@@ -18,6 +18,8 @@ public class Event {
     private String accessCode;
 
     private LocalDateTime createdAt = LocalDateTime.now();
+    @Column
+    private String photographerUsername;
 
     public Event() {}
 
@@ -37,6 +39,16 @@ public class Event {
     public void setHostUsername(String hostUsername) { this.hostUsername = hostUsername; }
 
     public String getAccessCode() { return accessCode; }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+
     public void setAccessCode(String accessCode) { this.accessCode = accessCode; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }

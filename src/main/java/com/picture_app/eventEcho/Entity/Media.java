@@ -1,6 +1,7 @@
 package com.picture_app.eventEcho.Entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +16,12 @@ public class Media {
 
     private String accessCode;
 
+    @CreationTimestamp
     private LocalDateTime uploadedAt = LocalDateTime.now();
+
+    private String guestName;
+    private String caption;
+
 
     public Media() {}
 
@@ -25,6 +31,31 @@ public class Media {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getGuestName() {
+        return guestName;
+    }
+
+    public void setGuestName(String guestName) {
+        this.guestName = guestName;
+    }
+
+    public Media(Long id, String fileName, String accessCode, LocalDateTime uploadedAt, String guestName, String caption) {
+        this.id = id;
+        this.fileName = fileName;
+        this.accessCode = accessCode;
+        this.uploadedAt = uploadedAt;
+        this.guestName = guestName;
+        this.caption = caption;
+    }
+
+    public String getCaption() {
+        return caption;
+    }
+
+    public void setCaption(String caption) {
+        this.caption = caption;
     }
 
     public String getFileName() {
